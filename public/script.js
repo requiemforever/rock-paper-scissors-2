@@ -178,7 +178,7 @@ function endGame() {
       }
     })
   });
-  }
+}
 
 // --- Журнал ---
 function showHistory() {
