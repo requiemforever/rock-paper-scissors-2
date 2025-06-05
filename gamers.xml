@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="gamers_table.xslt"?>
+<gamers>
+  <gamer>
+    <login>andrey</login>
+    <fullname>Andrey Herashenko</fullname>
+    <dob>2005-08-10</dob>
+    <email>andrey@example.com</email>
+    <games>
+      <game>
+        <date>2025-06-05T10:00:00</date>
+        <level>impossible</level>
+        <result>поразка</result>
+        <rounds>
+          <round><userMove>rock</userMove><botMove>paper</botMove><outcome>поразка</outcome></round>
+        </rounds>
+      </game>
+    </games>
+  </gamer>
+</gamers>
