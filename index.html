@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Камінь, Ножиці, Папір з 🤖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Гра: Камінь, Ножиці, Папір, ...</h1>
+
+  <section id="greeting" style="display:none;"></section>
+
+  <section id="registration">
+    <h2>Реєстрація</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="ПІБ" required name="fullname" />
+      <input type="date" required name="dob" />
+      <input type="email" placeholder="Email" required name="email" />
+      <input type="text" placeholder="Логін" required name="login" />
+      <input type="password" placeholder="Пароль" required name="password" />
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </section>
+
+  <section id="login">
+    <h2>Вхід</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="Логін" required name="login" />
+      <input type="password" placeholder="Пароль" required name="password" />
+      <button type="submit">Увійти</button>
+    </form>
+  </section>
+
+  <section id="gameSettings" style="display:none;">
+    <h2>Налаштування гри</h2>
+    <label>Рівень робота:
+      <select id="botLevel">
+        <option value="easy">Простий</option>
+        <option value="medium">Середній</option>
+        <option value="hard">Складний</option>
+        <option value="impossible">Неможливий</option>
+      </select>
+    </label>
+    <label>Кількість раундів:
+      <input type="number" id="rounds" value="3" min="1" max="100" />
+    </label>
+    <button id="startGame">Почати гру</button>
+  </section>
+
+  <section id="game" style="display:none;">
+    <h2>Граємо!</h2>
+    <div id="choices">
+      <button data-choice="rock">Камінь</button>
+      <button data-choice="paper">Папір</button>
+      <button data-choice="scissors">Ножиці</button>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <section id="history" style="display:none;">
+    <h2>Журнал результатів</h2>
+    <ul id="log"></ul>
+    <button id="exportJSON">Експортувати JSON</button>
+    <button id="exportXML">Експортувати XML</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
