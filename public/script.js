@@ -162,7 +162,23 @@ function endGame() {
   gameLog.push(entry);
   localStorage.setItem("gameLog", JSON.stringify(gameLog));
   showHistory();
-}
+  fetch('/save-game', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      login: currentUser,
+      fullname: users[currentUser].fullname,
+      dob: users[currentUser].dob,
+      email: users[currentUser].email,
+      game: {
+        date: new Date().toISOString(),
+        level: botLevel,
+        result: res,
+        rounds: history
+      }
+    })
+  });
+  }
 
 // --- Журнал ---
 function showHistory() {
